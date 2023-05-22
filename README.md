@@ -1,10 +1,13 @@
-# IRProject100121
-IR Project in BGU university:
-
-**== INDEX BILDING ==** <br/>[indexescreation.py]
+# Wikipedia Search Engine
+IR Project in BGU university<br/><br/>
+<picture>
+  <img alt="Wikipedia Curpos" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" width="250" height="250">
+</picture><br/>
+## Index Bilding <br/>
+[indexescreation.py]
 
 In order to retrieve the information quickly and efficiently, we have set up ahead of time three different inverted index objects based on the object provided to us in Task 3 which maintain in their fields useful calculation results aimed at shortening the retrieval time<br/>
-**- Index_text_readed** -inverted index that includes all the data of the body text of Wikipedia pages. In order to facilitate the calculations of tf-idf and cosine similarity the object also maintains the following fields:<br/>
++ **Index_text_readed** -inverted index that includes all the data of the body text of Wikipedia pages. In order to facilitate the calculations of tf-idf and cosine similarity the object also maintains the following fields:<br/>
 
    Self.N - The amount of all documents in the current inverted index.<br/>
 
@@ -13,18 +16,19 @@ In order to retrieve the information quickly and efficiently, we have set up ahe
   Self.doc_length - A dictionary that mapseach doc_id to its length<br/>
 
   Self.norma - A dictionary that maps each doc_id to its norma value calculated by the sum of the tf-idf values of all the words in the document, and finally a squart on the sum.(this value used in calculating the cosine similarity by tf-idf)<br/>
-**- Index_title _readed** -inverted index that integrates all the data of the titles of the Wikipedia pages and maintains the original fields of the object.<br/>
-**- Index_anchor _readed** -inverted index that integrates all the data of pages that appeared as links in Wikipedia pages and maintains the original fields of the object.<br/>
-**- Page_rank_dict** -A dictionary that maps each page in Wikipedia to its page rank value<br/>
-**- Page_views_dict** - A dictionary that maps each page of Wikipedia to its pageviews value.<br/>
-**- Max_pv** - A variable that maintains the maximum Pageviews value of all Wikipedia pages for normalization purposes.<br/>
-**- Max_pr** - A variable that maintains the maximum pagerank value of all Wikipedia pages for normalization purposes.<br/>
++ **Index_title _readed** -inverted index that integrates all the data of the titles of the Wikipedia pages and maintains the original fields of the object.<br/>
++ **Index_anchor _readed** -inverted index that integrates all the data of pages that appeared as links in Wikipedia pages and maintains the original fields of the object.<br/>
++ **Page_rank_dict** -A dictionary that maps each page in Wikipedia to its page rank value<br/>
++ **Page_views_dict** - A dictionary that maps each page of Wikipedia to its pageviews value.<br/>
++ **Max_pv** - A variable that maintains the maximum Pageviews value of all Wikipedia pages for normalization purposes.<br/>
++ **Max_pr** - A variable that maintains the maximum pagerank value of all Wikipedia pages for normalization purposes.<br/>
 
 we uploaded all the indecies files we created to the VM instance before loading search_frontend.py
 the file that calculate the indecies is by using spark methods and gcp.<br/>
 
 
-**== SEARCHING ENGINE FUNCTIONLITY ==**<br/> [search_fronted.py]<br/><br/>
+## SEARCHING ENGINE FUNCTIONLITY<br/>
+[search_fronted.py]<br/><br/>
 **global variables** - firat of all, we read to global variables all the data structures we prepared above. <br/>
 **Search_body()** - The function retrieves the 100 documents with the highest similarity value based on cosine similarity.<br/>
 **Search_title()** - The function retrieves all the documents in the title that contained the query words. Using the Posting list, for each document the number of times the. different query words appear in it is summarized, and finally the documents are displayed in descending order according to this value.<br/>
