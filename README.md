@@ -27,7 +27,7 @@ we uploaded all the indecies files we created to the VM instance before loading 
 the file that calculate the indecies is by using spark methods and gcp.<br/>
 
 
-## SEARCHING ENGINE FUNCTIONLITY<br/>
+## Searching Engine Functionality<br/>
 [search_fronted.py]<br/><br/>
 **global variables** - firat of all, we read to global variables all the data structures we prepared above. <br/>
 **Search_body()** - The function retrieves the 100 documents with the highest similarity value based on cosine similarity.<br/>
