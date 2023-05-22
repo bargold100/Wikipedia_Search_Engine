@@ -3,7 +3,7 @@ IR Project in BGU university<br/><br/>
 <picture>
   <img alt="Wikipedia Curpos" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1200px-Wikipedia-logo-v2.svg.png" width="250" height="250">
 </picture><br/>
-## Index Bilding <br/>
+## Index Building <br/>
 [indexescreation.py]
 
 In order to retrieve the information quickly and efficiently, we have set up ahead of time three different inverted index objects based on the object provided to us in Task 3 which maintain in their fields useful calculation results aimed at shortening the retrieval time<br/>
