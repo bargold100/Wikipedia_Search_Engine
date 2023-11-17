@@ -34,7 +34,6 @@ the file that calculate the indecies is by using spark methods and gcp.<br/>
 **Search_title()** - The function retrieves all the documents in the title that contained the query words. Using the Posting list, for each document the number of times the. different query words appear in it is summarized, and finally the documents are displayed in descending order according to this value.<br/>
 **Search_anchor()** - The function retrieves all documents linked from other pages that contained the query words in anchor_text. Using the Posting list, for each document the number of times the different query words appear in it is summarized, and finally the documents are displayed in descending order according to this value.<br/>
 **Get_pagerank()** - The function retrieves the Pagerank values for the docid values it received.<br/>
-**Get_pagerank()** - The function retrieves the pageviews values for the docid values it received.<br/>
 **Search()** - The main search function we chose for our engine is aided by the values returned from the basic functions above.<br/>
 the function performs a weighted average on the values returned from the functions mentioned above as follows:<br/>
 - Retrieve the top100 most similar documents returned from search_body and normalize the scores at the maximum value obtained for the highest doc_id.<br/>
